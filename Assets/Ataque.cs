@@ -13,6 +13,10 @@ public class Ataque : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButtonDown("Fire1"))
+        {
+            GetComponentInChildren<SpriteRenderer>().enabled = false;
+        }
     }
+    
 }
