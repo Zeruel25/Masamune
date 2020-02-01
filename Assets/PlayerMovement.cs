@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     public float runSpeed = 40f;
     bool jump = false;
+    bool crouch = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +25,19 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = true;
         }
+
+        if (Input.GetButtonDown("Crouch"))
+        {
+            crouch = true;
+        } else if (Input.GetButtonUp("Crouch"))
+        {
+            crouch = false;
+        }
     }
     private void FixedUpdate ()
     {
         //movimiento
-        controller.Move(horizontalMove * Time.fixedDeltaTime,false,jump);
+        controller.Move(horizontalMove * Time.fixedDeltaTime,crouch,jump);
         jump = false;
     }
 }
