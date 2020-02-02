@@ -24,7 +24,7 @@ public class EnemyEvent : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "Player") {
-            cameraFollow.Setup(() => (transform.position + new Vector3(10, 10, 10)));
+            //cameraFollow.Setup(() => (transform.position + new Vector3(10, 10, 10)));
         }
     }
 }
