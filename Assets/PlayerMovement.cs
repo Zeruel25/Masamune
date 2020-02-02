@@ -14,7 +14,10 @@ public class PlayerMovement : MonoBehaviour
     private float dirX;
     private bool facingRight = true;
     private Vector3 localScale;
- 
+
+    public AudioSource controlador;
+
+    public AudioClip clipRunnig;
 
     private float moveSpeed;
 

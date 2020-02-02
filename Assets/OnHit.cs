@@ -21,7 +21,13 @@ public class OnHit : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstaculo"))
         {
             collision.gameObject.SetActive(false);
-            collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            //collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            //collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
+        if (collision.gameObject.CompareTag("reparado"))
+        {
+           
+            collision.gameObject.GetComponent<SpriteRenderer>().enabled = true;
             collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
