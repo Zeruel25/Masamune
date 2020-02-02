@@ -9,6 +9,9 @@ public class Ataque : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
 
+    public AudioSource controlador;
+
+    public AudioClip clipAtk;
     // Update is called once per frame
     void Update()
     {
@@ -38,5 +41,9 @@ public class Ataque : MonoBehaviour
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
-  
+
+    public void  OnHit() {
+        controlador.PlayOneShot(clipAtk);
+    }
+
 }
