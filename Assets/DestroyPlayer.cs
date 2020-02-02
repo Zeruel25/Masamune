@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class EnemyEvent : MonoBehaviour
+public class DestroyPlayer : MonoBehaviour
 {
+    public Transform player;
 
-    private CameraController cameraFollow;
-    private Transform transform;
+    public Transform spawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -22,9 +21,11 @@ public class EnemyEvent : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision)
-    {
+        {
+        Debug.Log("Collision");
         if (collision.transform.tag == "Player") {
-            cameraFollow.Setup(() => (new Vector2(transform.position.x + 10, transform.position.y)));
+            Debug.Log("Player");
+            player.position = spawnPoint.position;
         }
     }
 }

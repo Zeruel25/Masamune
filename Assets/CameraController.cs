@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
 {
     public GameObject player;
     public float initialPositionY;
-    public Func<Vector3> GetCameraFollow;
+    public Func<Vector2> GetCameraFollow;
     public bool isSettup = false;
     void Start()
     {
@@ -29,7 +29,7 @@ public class CameraController : MonoBehaviour
 
 
 
-   public void Setup(Func<Vector3> GetCameraFollow)
+   public void Setup(Func<Vector2> GetCameraFollow)
     {
         this.GetCameraFollow = GetCameraFollow;
         isSettup = true;
