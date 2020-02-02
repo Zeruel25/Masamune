@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyEvent : MonoBehaviour
+public class EnemyTrap : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,10 +14,5 @@ public class EnemyEvent : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void OnCollision()
-    {
-
     }
 }

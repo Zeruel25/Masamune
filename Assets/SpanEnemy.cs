@@ -7,7 +7,7 @@ public class SpanEnemy : MonoBehaviour
    public float smoothSpeed = 0.125f;
     public Vector3 offset;
     void LateUpate() {
-0        transform.position = tr.position + offset;
+       // transform.position = tr.position + offset;
     }
 
 }
